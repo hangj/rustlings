@@ -2,9 +2,12 @@
 // Make me compile, without taking the macro out of the module!
 // Execute `rustlings hint macros3` for hints :)
 
-// I AM NOT DONE
+
 
 mod macros {
+    pub use my_macro;
+
+    #[macro_export]
     macro_rules! my_macro {
         () => {
             println!("Check out my macro!");
@@ -12,6 +15,9 @@ mod macros {
     }
 }
 
+
 fn main() {
-    my_macro!();
+    let 你好 = "你好";
+
+    macros::my_macro!();
 }
